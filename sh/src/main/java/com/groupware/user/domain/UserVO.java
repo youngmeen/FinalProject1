@@ -1,18 +1,20 @@
 package com.groupware.user.domain;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 import lombok.Data;
 
 @Data
 public class UserVO {
 
-	private String id; 
-	private String pw;
-	private String address;
-	private String writer;
-	private Date regdate;
-	private Date updateDate;
+	private String userId;
+	private String userPw;
+	private String userName;
+	private Date userJoinDate;
+	private Date userLoginDate;
+	private String userSignature;
+	private String userImg;
 	
 	
 }

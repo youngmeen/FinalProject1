@@ -30,7 +30,7 @@
 			<div class="container mt-5">
 				<div class="page-error">
 					<div class="page-inner">
-						<h1>404</h1>
+						<h1>500</h1>
 						<div class="page-description">The page you were looking for
 							could not be found.</div>
 						<div class="page-search">

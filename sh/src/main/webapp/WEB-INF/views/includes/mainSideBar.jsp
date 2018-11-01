@@ -8,7 +8,7 @@
 		</div>
 		<div class="sidebar-user">
 			<div class="sidebar-user-picture">
-				<img alt="image" src="../dist/img/avatar/avatar-1.jpeg">
+				<img alt="image" src="/resources/dist/img/avatar/avatar-1.jpeg">
 			</div>
 			<div class="sidebar-user-details">
 				<div class="user-name">Ujang Maman</div>

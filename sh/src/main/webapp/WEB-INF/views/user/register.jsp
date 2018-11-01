@@ -42,7 +42,7 @@
 								<form method="POST">
 									<div class="row">
 										<div class="form-group col-6">
-											<label for="frist_name">First Name</label> <input
+											<label for="frist_name">아이디</label> <input
 												id="frist_name" type="text" class="form-control"
 												name="frist_name" autofocus>
 										</div>

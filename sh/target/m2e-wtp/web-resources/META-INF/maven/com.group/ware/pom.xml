@@ -175,11 +175,18 @@
 			<version>3.1.0</version>
 		</dependency>
 
-		<!-- lombok에러 코드 수정 라이브러리-->
+		<!-- lombok에러 코드 수정 라이브러리 -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-1.2-api</artifactId>
 			<version>2.7</version>
+		</dependency>
+
+		<!-- 로그인 암호화 방법 HASH 코드로 변환 -->
+		<dependency>
+			<groupId>org.mindrot</groupId>
+			<artifactId>jbcrypt</artifactId>
+			<version>0.4</version>
 		</dependency>
 
 

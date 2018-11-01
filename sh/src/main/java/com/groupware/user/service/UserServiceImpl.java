@@ -1,28 +1,29 @@
 package com.groupware.user.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.groupware.user.domain.UserVO;
+import com.groupware.user.mapper.UserMapper;
 
 import lombok.AllArgsConstructor;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
-@AllArgsConstructor
 @Service
+@AllArgsConstructor
 public class UserServiceImpl implements UserService {
 
 	@Setter(onMethod_ = @Autowired)
-	private com.groupware.user.mapper.UserMapper mapper;
+	private UserMapper mapper;
+	
 
 	@Override
-	public List<UserVO> getList() {
+	public void register(UserVO userVO) throws Exception {
 		// TODO Auto-generated method stub
-		return mapper.getList();
+
+		mapper.register(userVO);
 	}
 
 }
