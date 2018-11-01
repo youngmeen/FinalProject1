@@ -37,7 +37,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/youngmeen/Desktop/새 폴더 (3)/database/stage/ext/jlib/ojdbc8.jar">
+	<classpathentry kind="lib" path="D:/sprins/FinalProject-suppport1/ojdbc8.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

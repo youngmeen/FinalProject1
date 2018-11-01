@@ -36,7 +36,7 @@
 				</ul></li>
 
 			<!-- 단일 메뉴아이템으로 사용할 경우 아래와 같이 사용합니다. -->
-			<li><a href="table.html"><i class="ion ion-clipboard"></i><span>Tables</span></a>
+			<li><a href="/user/login"><i class="ion ion-clipboard"></i><span>Tables</span></a>
 			</li>
 
 			<li><a href="/boardList"><i
