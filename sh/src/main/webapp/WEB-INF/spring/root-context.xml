@@ -13,8 +13,8 @@
 		<property name="driverClassName"
 			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="jdbcUrl"
-			value="jdbc:log4jdbc:oracle:thin:@localhost:1521:XE"></property>
-		<property name="username" value="final"></property>
+			value="jdbc:log4jdbc:oracle:thin:@localhost:1521:orcl"></property>
+		<property name="username" value="C##scott"></property>
 		<property name="password" value="1234"></property>
 	</bean>
 
@@ -22,15 +22,22 @@
 		destroy-method="close">
 		<constructor-arg ref="hikariConfig"></constructor-arg>
 	</bean>
-	
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+
+	<bean id="sqlSessionFactory"
+		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
-	
+
 	<!-- 여기 잊지말자 -->
-	<mybatis-spring:scan base-package="com.groupware.board.mapper"/>
-	
-	<context:component-scan base-package="com.gruopware.board.service"/>
-	
-	
+	<mybatis-spring:scan
+		base-package="com.groupware.board.mapper" />
+	<mybatis-spring:scan
+		base-package="com.groupware.user.mapper" />
+
+	<context:component-scan
+		base-package="com.gruopware.board.service" />
+	<context:component-scan
+		base-package="com.gruopware.user.service" />
+
+
 </beans>
