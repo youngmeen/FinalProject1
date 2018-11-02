@@ -23,7 +23,6 @@
 <link rel="stylesheet" href="/resources/dist/css/demo.css">
 <link rel="stylesheet" href="/resources/dist/css/style.css">
 </head>
-
 <body>
 	<div id="app">
 		<section class="section">
@@ -31,7 +30,7 @@
 				<div class="row">
 					<div
 						class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
-						<div class="login-brand">Stisla</div>
+						<div class="login-brand">GroupWare Login</div>
 
 						<div class="card card-primary">
 							<div class="card-header">
@@ -47,8 +46,8 @@
 												name="frist_name" autofocus>
 										</div>
 										<div class="form-group col-6">
-											<label for="last_name">Last Name</label> <input
-												id="last_name" type="text" class="form-control"
+											<label for="last_name">비밀번호</label> <input
+												id="last_name" type="password" class="form-control"
 												name="last_name">
 										</div>
 									</div>
