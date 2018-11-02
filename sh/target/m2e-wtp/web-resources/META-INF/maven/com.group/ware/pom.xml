@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.group</groupId>
 	<artifactId>ware</artifactId>
-	<name>Web</name>
+	<name>Web1</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -59,6 +59,13 @@
 			<version>${org.slf4j-version}</version>
 			<scope>runtime</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-1.2-api</artifactId>
+			<version>2.7</version>
+		</dependency>
+
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -174,21 +181,6 @@
 			<artifactId>HikariCP</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-
-		<!-- lombok에러 코드 수정 라이브러리 -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-1.2-api</artifactId>
-			<version>2.7</version>
-		</dependency>
-
-		<!-- 로그인 암호화 방법 HASH 코드로 변환 -->
-		<dependency>
-			<groupId>org.mindrot</groupId>
-			<artifactId>jbcrypt</artifactId>
-			<version>0.4</version>
-		</dependency>
-
 
 
 	</dependencies>

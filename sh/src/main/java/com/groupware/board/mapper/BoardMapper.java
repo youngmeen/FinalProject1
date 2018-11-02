@@ -6,4 +6,5 @@ import com.groupware.board.domain.BoardVO;
 
 public interface BoardMapper {
 	public List<BoardVO>getList();
+	public BoardVO get();
 }

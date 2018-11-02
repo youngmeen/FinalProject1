@@ -18,3 +18,4 @@
 	</section>
 </div>
 
+<%@ include file="./includes/footer.jsp"%>
