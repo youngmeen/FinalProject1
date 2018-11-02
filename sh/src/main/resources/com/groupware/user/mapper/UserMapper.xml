@@ -7,15 +7,19 @@
 
 	<insert id="register">
 		INSERT INTO tbl_user(
-		user_id
-		,user_pw
-		,user_name
-		,user_email)
+		USERNUM
+		,USERID
+		,USERPW
+		,USERNAME
+		,ADDRESS
+		,USERJOINDATE)
 		values(
-		#{userId}
-		,#{userPw}
-		,#{userName}
-		,#{userEmail}
+		NO_SEQ.NEXTVAL
+		,#{userId,jdbcType=VARCHAR}
+		,#{userPw,jdbcType=VARCHAR}
+		,#{userName,jdbcType=VARCHAR}
+		,#{address,jdbcType=VARCHAR}
+		,SYSDATE
 		)
 
 	</insert>
