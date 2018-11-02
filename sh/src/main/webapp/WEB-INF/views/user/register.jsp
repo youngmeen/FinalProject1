@@ -41,35 +41,38 @@
 								<form method="POST">
 									<div class="form-group">
 										<label for="USERID">아이디</label> <input id="userId" type="text"
-											class="form-control" name="userId" autofocus>
+											class="form-control" name="userId" required autofocus>
+										<div class="invalid-feedback">빈칸에 아이디를 넣어주세요</div>
 									</div>
 									<div class="row">
 										<div class="form-group col-6">
 											<label for="USERPW" class="d-block">Password</label> <input
-												id="userPw" type="password" class="form-control">
+												id="userPw" type="password" class="form-control" required>
+											<div class="invalid-feedback">please fill in your
+												password</div>
 										</div>
 										<div class="form-group col-6">
 											<label for="userPw_confirm" class="d-block">Password
 												Confirmation</label> <input id="userPw_confirm" type="password"
-												class="form-control">
+												class="form-control" required>
+											<div class="invalid-feedback">please fill in your
+												password</div>
 										</div>
 									</div>
-
 									<div class="form-group">
 										<label for="USERNAME">이름</label> <input id="userName"
-											type="text" class="form-control">
-										<div class="invalid-feedback"></div>
+											type="text" class="form-control" name="userName" required
+											autofocus>
+										<div class="invalid-feedback">빈칸에 이름을 넣어주세요</div>
 									</div>
-
 
 									<div class="form-group">
 										<label for="ADDRESS">주소</label> <input id="address"
-											type="text" class="form-control">
-										<div class="invalid-feedback"></div>
+											type="text" class="form-control" name="address" required
+											autofocus>
+										<div class="invalid-feedback">>please fill in your
+											address</div>
 									</div>
-
-
-
 
 									<div class="form-group">
 										<button type="submit" class="btn btn-primary btn-block">
@@ -88,7 +91,7 @@
 	<script>
 		$(function() {
 			$('input').icheck({
-				
+
 			})
 
 		})

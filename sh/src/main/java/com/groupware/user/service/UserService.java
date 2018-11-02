@@ -1,14 +1,13 @@
 package com.groupware.user.service;
 
-import java.util.List;
-
-import javax.servlet.http.HttpSession;
-
+import com.groupware.user.domain.LoginDTO;
 import com.groupware.user.domain.UserVO;
 
 public interface UserService {
-	
-	void register(UserVO userVO) throws Exception;
-	
-	
+
+	public void register(UserVO userVO) throws Exception;
+
+	public UserVO login(LoginDTO loginDTO) throws Exception;
+
+
 }
