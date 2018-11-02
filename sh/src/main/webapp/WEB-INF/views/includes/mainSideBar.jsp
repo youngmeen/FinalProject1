@@ -4,11 +4,11 @@
 <div class="main-sidebar">
 	<aside id="sidebar-wrapper">
 		<div class="sidebar-brand">
-			<a href="index.html">지각쟁이들</a>
+			<a href="/">지각쟁이들</a>
 		</div>
 		<div class="sidebar-user">
 			<div class="sidebar-user-picture">
-				<img alt="image" src="../dist/img/avatar/avatar-1.jpeg">
+				<img alt="image" src="resources/dist/img/avatar/avatar-1.jpeg">
 			</div>
 			<div class="sidebar-user-details">
 				<div class="user-name">Ujang Maman</div>
