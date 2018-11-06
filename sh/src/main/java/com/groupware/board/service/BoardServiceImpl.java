@@ -29,10 +29,33 @@ public class BoardServiceImpl implements BoardService{
 	}
 	
 	@Override
-	public BoardVO get(Long bno) {
+	public void register(BoardVO board) {
 		
-		log.info("BoardService.getList()....");
+		log.info("BoardService.register()....");
 		
-		return mapper.get();
+		mapper.insertSelectKey(board);
+	}
+	
+	@Override
+	public BoardVO read(Long bno) {
+		
+		log.info("BoardService.get(Long bno)....");
+		
+		return mapper.read(bno);
+	}	
+
+	@Override
+	public boolean modify(BoardVO board) {
+		// TODO Auto-generated method stub
+		log.info("modify..." + board);
+	
+		return mapper.update(board) == 1;
+	}	
+	
+	@Override
+	public boolean remove(Long bno) {
+		log.info("remove.......");
+		
+		return mapper.delete(bno)==1;
 	}
 }

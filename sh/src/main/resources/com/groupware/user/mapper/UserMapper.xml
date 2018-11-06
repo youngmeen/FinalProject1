@@ -7,28 +7,24 @@
 
 	<insert id="register">
 		INSERT INTO tbl_user(
-		USERNUM
-		,USERID
+		USERID
 		,USERPW
 		,USERNAME
-		,ADDRESS
 		,USERJOINDATE)
 		values(
-		NO_SEQ.NEXTVAL
-		,#{userId,jdbcType=VARCHAR}
+		#{userId,jdbcType=VARCHAR}
 		,#{userPw,jdbcType=VARCHAR}
 		,#{userName,jdbcType=VARCHAR}
-		,#{address,jdbcType=VARCHAR}
 		,SYSDATE
 		)
 	</insert>
 
 	<select resultType="com.groupware.user.domain.UserVO" id="login">
-		select USERID, USERPW
-		from
-		tbl_user where USERID =
-		#{userId,jdbcType=VARCHAR}
-		and
-		USERPW = #{userPw,jdbcType=VARCHAR}
+	select USERID, USERPW
+	from
+	tbl_user where USERID =
+	#{userId,jdbcType=VARCHAR}
+	and
+	USERPW = #{userPw,jdbcType=VARCHAR}
 	</select>
 </mapper>

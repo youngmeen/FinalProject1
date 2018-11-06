@@ -1,6 +1,6 @@
 package com.groupware.board.domain;
 
-import java.util.Date;
+import java.sql.Date;
 
 import lombok.Data;
 

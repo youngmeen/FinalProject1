@@ -1,6 +1,7 @@
 package com.groupware.user.controller;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.mindrot.jbcrypt.BCrypt;
@@ -17,34 +18,31 @@ import com.groupware.user.domain.UserVO;
 import com.groupware.user.service.UserService;
 
 import lombok.extern.log4j.Log4j;
+import oracle.jdbc.driver.DatabaseError;
 
 @Log4j
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
-	private final UserService userService;
-
 	@Inject
-	public UserController(UserService userService) {
-		this.userService = userService;
-	}
+	private UserService userService;
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String loginGET(@ModelAttribute("loginDTO") LoginDTO loginDTO) {
-		return "user/login";
+	public void loginGET(@ModelAttribute("dto") LoginDTO dto) {
+
 	}
 
 	@RequestMapping(value = "/loginPost", method = RequestMethod.POST)
-	public void loginPOST(LoginDTO loginDTO, HttpSession httpSession, Model model) throws Exception {
+	public void loginPOST(LoginDTO dto, HttpSession session, Model model) throws Exception {
 
-		UserVO userVO = userService.login(loginDTO);
+		UserVO vo = userService.login(dto);
 
-		if (userVO == null || !BCrypt.checkpw(loginDTO.getUserPw(), userVO.getUserPw())) {
+		if (vo == null || !BCrypt.checkpw(dto.getUserPw(), vo.getUserPw())) {
 			return;
 		}
 
-		model.addAttribute("user", userVO);
+		model.addAttribute("userVO", vo);
 
 	}
 
@@ -57,6 +55,7 @@ public class UserController {
 	public String registerPOST(UserVO userVO, RedirectAttributes redirectAttributes) throws Exception {
 
 		String hashedPw = BCrypt.hashpw(userVO.getUserPw(), BCrypt.gensalt());
+
 		userVO.setUserPw(hashedPw);
 		userService.register(userVO);
 		redirectAttributes.addFlashAttribute("msg", "REGISTERD");

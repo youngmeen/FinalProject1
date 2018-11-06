@@ -22,7 +22,10 @@
 
 <link rel="stylesheet" href="/resources/dist/css/demo.css">
 <link rel="stylesheet" href="/resources/dist/css/style.css">
+
+
 </head>
+
 <body>
 	<div id="app">
 		<section class="section">
@@ -75,8 +78,8 @@
 									</div>
 
 									<div class="form-group">
-										<button type="submit" class="btn btn-primary btn-block">
-											Register</button>
+										<input type="submit" class="btn btn-primary btn-block"
+											value="회원가입"  />
 									</div>
 								</form>
 							</div>
@@ -88,14 +91,9 @@
 		</section>
 	</div>
 
-	<script>
-		$(function() {
-			$('input').icheck({
 
-			})
 
-		})
-	</script>
+
 
 	<script src="/resources/dist/modules/jquery.min.js"></script>
 	<script src="/resources/dist/modules/popper.js"></script>

@@ -21,15 +21,6 @@
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
-	<beans:bean id="loginInterceptor"	
-		class="com.groupware.commons.LoginInterceptor" />
-
-	<mvc:interceptors>
-		<mvc:interceptor>
-			<mvc:mapping path="/user/loginPost" />
-			<beans:ref bean="loginInterceptor" />
-		</mvc:interceptor>
-	</mvc:interceptors>
 
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
@@ -41,6 +32,17 @@
 	</beans:bean>
 
 
+	<beans:bean id="loginInterceptor"
+		class="com.groupware.commons.LoginInterceptor" />
+
+	<interceptors>
+		<interceptor>
+			<mapping path="/user/loginPost" />
+			<beans:ref bean="loginInterceptor" />
+		</interceptor>
+
+
+	</interceptors>
 
 
 	<context:component-scan

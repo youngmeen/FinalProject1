@@ -9,16 +9,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var loginAfter = '${loginResult}';
-
-		if (loginAfter) {
-			alert("success login");
-
-			window.location.reload(true);
-		}
-
-		alert("아이디와 비밀번호를 확인해주세요.");
-		self.location = "/user/login";
+		self.location = "/home";
 	</script>
 </body>
 </html>
