@@ -22,6 +22,55 @@
 
 <link rel="stylesheet" href="/resources/dist/css/demo.css">
 <link rel="stylesheet" href="/resources/dist/css/style.css">
+<script type="text/javascript"
+	src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	function checkz() {
+		var getCheck = RegExp(/^[a-zA-Z0-9]{4,12}$/);
+		var getName = RegExp(/^[가-힣]+$/);
+		var fmt = RegExp(/^\d{6}[1234]\d{6}$/); //형식 설정
+
+		//이름의 유효성 검사
+		if (!getCheck.test($("#userId").val())) {
+			alert("형식에 맞게 입력해주세요");
+			$("#userId").val("");
+			$("#userId").focus();
+			return false;
+		}
+
+		//비밀번호
+		if (!getCheck.test($("#userPw").val())) {
+			alert("형식에 맞게 비밀번호를 입력해주세요");
+			$("#userPw").val("");
+			$("#userPw").focus();
+			return false;
+		}
+
+		//아이디랑 비밀번호랑 같은지
+		if ($("#userId").val() == ($("#userPw").val())) {
+			$("#userPw").val("");
+			$("#userPw").focus();
+		}
+
+		//비밀번호 똑같은지
+		if ($("#userPw").val() != ($("#userPw_confirm").val())) {
+			alert("비밀번호가  서로 같지 않습니다.");
+			$("#userPw").val("");
+			$("#userPw_confirm").val("");
+			$("#userPw").focus();
+			return false;
+		}
+
+		//이름 유효성
+		if (!getName.test($("#userName").val())) {
+			$("#userName").val("");
+			$("#userName").focus();
+			return false;
+		}
+
+		return true;
+	}
+</script>
 
 
 </head>
@@ -41,7 +90,7 @@
 							</div>
 
 							<div class="card-body">
-								<form method="POST">
+								<form onsubmit="return checkz()" method="POST">
 									<div class="form-group">
 										<label for="USERID">아이디</label> <input id="userId" type="text"
 											class="form-control" name="userId" required autofocus>
@@ -79,7 +128,7 @@
 
 									<div class="form-group">
 										<input type="submit" class="btn btn-primary btn-block"
-											value="회원가입"  />
+											value="회원가입" />
 									</div>
 								</form>
 							</div>
@@ -90,9 +139,6 @@
 			</div>
 		</section>
 	</div>
-
-
-
 
 
 	<script src="/resources/dist/modules/jquery.min.js"></script>

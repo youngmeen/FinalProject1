@@ -6,7 +6,7 @@
 <mapper namespace="com.groupware.user.mapper.UserMapper">
 
 	<insert id="register">
-		INSERT INTO tbl_user(
+		INSERT INTO tbl_user1(
 		USERID
 		,USERPW
 		,USERNAME
@@ -20,11 +20,12 @@
 	</insert>
 
 	<select resultType="com.groupware.user.domain.UserVO" id="login">
-	select USERID, USERPW
-	from
-	tbl_user where USERID =
-	#{userId,jdbcType=VARCHAR}
-	and
-	USERPW = #{userPw,jdbcType=VARCHAR}
+		select
+		USERID, USERPW
+		from
+		tbl_user1 where USERID =
+		#{userId,jdbcType=VARCHAR}
+		and
+		USERPW = #{userPw,jdbcType=VARCHAR}
 	</select>
 </mapper>

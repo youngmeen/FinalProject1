@@ -55,9 +55,11 @@ public class UserController {
 	public String registerPOST(UserVO userVO, RedirectAttributes redirectAttributes) throws Exception {
 
 		String hashedPw = BCrypt.hashpw(userVO.getUserPw(), BCrypt.gensalt());
-
+		
 		userVO.setUserPw(hashedPw);
 		userService.register(userVO);
+		
+		
 		redirectAttributes.addFlashAttribute("msg", "REGISTERD");
 
 		return "redirect:/user/login";

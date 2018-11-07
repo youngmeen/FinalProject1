@@ -3,12 +3,12 @@ package com.groupware.user.domain;
 import java.util.Date;
 
 
+
 import lombok.Data;
 
 @Data
-public class UserVO {
 
-	
+public class UserVO {	
 	
 	private String userId;
 	
